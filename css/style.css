@@ -1,0 +1,50 @@
+@import url(reset.css);
+
+/* FONT SETTING */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/crimson-text');
+
+/* 
+1. font-family: 'Playfair Display', serif;
+2. font-family: 'Crimson Text', sans-serif;  (400, 600, 700 사용가능)
+*/
+
+/* css root */
+:root {
+  /* Color */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-beige: #e8e5de;
+
+  /* font size */
+  --font-large: 60px;
+  --font-medium: 32px;
+  --font-regular: 18px;
+  --font-small: 15px;
+  --font-micro: 12px;
+
+  /* font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-medium: 500;
+  --weight-regular: 400;
+}
+
+/* font */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-weight: var(--font-large);
+  font-weight: var(--weight-bold);
+}
+
+h2 {
+  font-weight: var(--font-medium);
+  font-weight: var(--weight-medium);
+}
