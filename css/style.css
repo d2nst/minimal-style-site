@@ -27,6 +27,7 @@ nav {
   height: 20px;
   transition: 0.3s ease-in-out;
   z-index: 2;
+  cursor: pointer;
 }
 
 .burger-bar span {
@@ -87,26 +88,26 @@ nav {
   width: 0;
   visibility: hidden;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 70px 50px 50px 40px;
   transition: 0.3s;
   z-index: 1;
 }
 
 .site-menu li {
-  margin: 16px 0;
+  padding: 8px 0;
   opacity: 0;
 }
 
 .site-menu li a {
   color: #000;
-  opacity: 0.75;
+  font-size: var(--font-small);
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-.site-menu li a:hover {
-  opacity: 1;
+.site-menu li a:hover,
+.site-menu li a.active {
+  opacity: 0.5;
 }
 
 @keyframes fadeInLeft {
