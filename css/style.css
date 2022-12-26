@@ -1,50 +1,146 @@
 @import url(reset.css);
+@import url(common.css);
 
-/* FONT SETTING */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
-@import url('http://fonts.cdnfonts.com/css/crimson-text');
+/* ====== layout ====== */
 
-/* 
-1. font-family: 'Playfair Display', serif;
-2. font-family: 'Crimson Text', sans-serif;  (400, 600, 700 사용가능)
-*/
-
-/* css root */
-:root {
-  /* Color */
-  --color-white: #fff;
-  --color-black: #000;
-  --color-beige: #e8e5de;
-
-  /* font size */
-  --font-large: 60px;
-  --font-medium: 32px;
-  --font-regular: 18px;
-  --font-small: 15px;
-  --font-micro: 12px;
-
-  /* font weight */
-  --weight-bold: 700;
-  --weight-semi-bold: 600;
-  --weight-medium: 500;
-  --weight-regular: 400;
+nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-/* font */
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Playfair Display', serif;
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 28px;
 }
 
-h1 {
-  font-weight: var(--font-large);
+.site-nav .logo a {
+  font-size: 2.5rem;
+  color: var(--color-black);
   font-weight: var(--weight-bold);
 }
 
-h2 {
-  font-weight: var(--font-medium);
-  font-weight: var(--weight-medium);
+/* hamburgerbar */
+.burger-bar {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.burger-bar span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  top: 0;
+  background-color: #000;
+  transition: 0.2s;
+}
+
+.burger-bar span:nth-child(1) {
+  top: 0;
+}
+
+.burger-bar span:nth-child(2),
+.burger-bar span:nth-child(3) {
+  top: 10px;
+}
+
+.burger-bar span:nth-child(4) {
+  top: 20px;
+}
+
+.burger-bar.open span:nth-child(1),
+.burger-bar.open span:nth-child(4) {
+  opacity: 0;
+}
+
+.burger-bar.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.burger-bar.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Click on the burger bar => site menu 보여지게 */
+
+.overlay-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.overlay-wrap.shadow {
+  background: rgba(0, 0, 0, 0.071);
+}
+
+.overlay {
+  position: fixed;
+  background: #e8e5de;
+  top: 0;
+  right: 0;
+  width: 0;
+  visibility: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.site-menu li {
+  margin: 16px 0;
+  opacity: 0;
+}
+
+.site-menu li a {
+  color: #000;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.site-menu li a:hover {
+  opacity: 1;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.overlay.visible {
+  width: 300px;
+  opacity: 0.85;
+  visibility: visible;
+}
+
+.overlay.visible .site-menu li {
+  animation: fadeInLeft 0.3s ease forwards;
+}
+
+.overlay.visible .site-menu li:nth-child(1) {
+  animation-delay: 0.23s;
+}
+.overlay.visible .site-menu li:nth-child(2) {
+  animation-delay: 0.26s;
+}
+.overlay.visible .site-menu li:nth-child(3) {
+  animation-delay: 0.29s;
+}
+.overlay.visible .site-menu li:nth-child(4) {
+  animation-delay: 0.32s;
+}
+.overlay.visible .site-menu li:nth-child(5) {
+  animation-delay: 0.35s;
 }
