@@ -82,11 +82,10 @@ header {
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
   transition: 0.3s;
-  z-index: 99;
 }
 
 #overlay .inner {
-  position: fixed;
+  position: absolute;
   background: #e8e5de;
   top: 0;
   right: 0;
@@ -132,6 +131,7 @@ header {
 
 #overlay.visible {
   opacity: 1;
+  z-index: 1;
 }
 
 #overlay.visible .inner {
