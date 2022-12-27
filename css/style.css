@@ -3,21 +3,27 @@
 
 /* ====== layout ====== */
 
-nav {
+header {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.site-nav {
+.header-inner {
   display: flex;
   justify-content: space-between;
   padding: 0 28px;
 }
 
-.site-nav .logo a {
+.header-inner .logo a {
   font-size: 2.5rem;
   color: var(--color-black);
   font-weight: var(--weight-bold);
+}
+
+/* header MENU */
+
+.menu {
+  position: relative;
 }
 
 /* hamburgerbar */
@@ -26,7 +32,7 @@ nav {
   width: 30px;
   height: 20px;
   transition: 0.3s ease-in-out;
-  z-index: 2;
+  z-index: 999;
   cursor: pointer;
 }
 
@@ -67,20 +73,19 @@ nav {
 
 /* Click on the burger bar => site menu 보여지게 */
 
-.overlay-wrap {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+#overlay {
+  position: fixed;
   left: 0;
   right: 0;
-  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 99;
 }
 
-.overlay-wrap.shadow {
-  background: rgba(0, 0, 0, 0.071);
-}
-
-.overlay {
+#overlay .inner {
   position: fixed;
   background: #e8e5de;
   top: 0;
@@ -90,23 +95,27 @@ nav {
   height: 100%;
   padding: 70px 50px 50px 40px;
   transition: 0.3s;
-  z-index: 1;
+  z-index: 999;
 }
 
-.site-menu li {
+#overlay ul {
+  z-index: 999;
+}
+
+#overlay .inner ul li {
   padding: 8px 0;
   opacity: 0;
 }
 
-.site-menu li a {
+#overlay .inner ul li a {
   color: #000;
   font-size: var(--font-small);
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-.site-menu li a:hover,
-.site-menu li a.active {
+#overlay .inner ul li a:hover,
+#overlay .inner ul li a.active {
   opacity: 0.5;
 }
 
@@ -120,28 +129,33 @@ nav {
     transform: translateX(0);
   }
 }
-.overlay.visible {
+
+#overlay.visible {
+  opacity: 1;
+}
+
+#overlay.visible .inner {
   width: 300px;
-  opacity: 0.85;
+  opacity: 1;
   visibility: visible;
 }
 
-.overlay.visible .site-menu li {
+#overlay.visible ul li {
   animation: fadeInLeft 0.3s ease forwards;
 }
 
-.overlay.visible .site-menu li:nth-child(1) {
+#overlay.visible ul li:nth-child(1) {
   animation-delay: 0.23s;
 }
-.overlay.visible .site-menu li:nth-child(2) {
+#overlay.visible ul li:nth-child(2) {
   animation-delay: 0.26s;
 }
-.overlay.visible .site-menu li:nth-child(3) {
+#overlay.visible ul li:nth-child(3) {
   animation-delay: 0.29s;
 }
-.overlay.visible .site-menu li:nth-child(4) {
+#overlay.visible ul li:nth-child(4) {
   animation-delay: 0.32s;
 }
-.overlay.visible .site-menu li:nth-child(5) {
+#overlay.visible ul li:nth-child(5) {
   animation-delay: 0.35s;
 }

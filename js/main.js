@@ -1,20 +1,18 @@
-const burger = document.querySelector('.burger-bar');
-const showMenu = document.querySelector('.overlay');
-const shadowBg = document.querySelector('.overlay-wrap');
-
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  showMenu.classList.toggle('visible');
-  shadowBg.classList.toggle('shadow');
-});
-
-//
-
-const menuActive = document.querySelectorAll('.site-menu li a');
+// menu 활성화
+const menuActive = document.querySelectorAll('#overlay ul li a');
 
 menuActive.forEach((element) => {
   element.addEventListener('click', function () {
     menuActive.forEach((nav) => nav.classList.remove('active'));
     this.classList.add('active');
   });
+});
+
+// 햄버거바 클릭 시, 엑스표시 변함 & 메뉴바 열림
+const burger = document.querySelector('.burger-bar');
+const overlay = document.querySelector('#overlay');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  overlay.classList.toggle('visible');
 });
