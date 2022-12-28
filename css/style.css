@@ -2,6 +2,22 @@
 @import url(common.css);
 
 /* ====== layout ====== */
+.container {
+  max-width: 1140px;
+}
+
+.contents {
+  position: relative;
+}
+
+/* .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+} */
+
+/* HEADER START */
 
 header {
   padding-top: 20px;
@@ -11,7 +27,8 @@ header {
 .header-inner {
   display: flex;
   justify-content: space-between;
-  padding: 0 28px;
+  align-items: center;
+  padding: 0 15px;
 }
 
 .header-inner .logo a {
@@ -29,8 +46,8 @@ header {
 /* hamburgerbar */
 .burger-bar {
   position: relative;
-  width: 30px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   transition: 0.3s ease-in-out;
   z-index: 999;
   cursor: pointer;
@@ -39,7 +56,7 @@ header {
 .burger-bar span {
   position: absolute;
   width: 100%;
-  height: 3px;
+  height: 2px;
   border-radius: 3px;
   top: 0;
   background-color: #000;
@@ -59,6 +76,10 @@ header {
   top: 20px;
 }
 
+.burger-bar.open {
+  position: fixed;
+}
+
 .burger-bar.open span:nth-child(1),
 .burger-bar.open span:nth-child(4) {
   opacity: 0;
@@ -73,7 +94,7 @@ header {
 
 /* Click on the burger bar => site menu 보여지게 */
 
-#overlay {
+.overlay {
   position: fixed;
   left: 0;
   right: 0;
@@ -83,9 +104,10 @@ header {
   opacity: 0;
   transition: 0.3s;
   visibility: hidden;
+  z-index: 1;
 }
 
-#overlay .inner {
+.overlay ul {
   position: absolute;
   background: #e8e5de;
   top: 0;
@@ -98,24 +120,20 @@ header {
   z-index: 999;
 }
 
-#overlay ul {
-  z-index: 999;
-}
-
-#overlay .inner ul li {
+.overlay ul li {
   padding: 8px 0;
   opacity: 0;
 }
 
-#overlay .inner ul li a {
+.overlay ul li a {
   color: #000;
   font-size: var(--font-small);
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-#overlay .inner ul li a:hover,
-#overlay .inner ul li a.active {
+.overlay ul li a:hover,
+.overlay ul li a.active {
   opacity: 0.5;
 }
 
@@ -130,33 +148,145 @@ header {
   }
 }
 
-#overlay.visible {
+.overlay.visible {
   opacity: 1;
   visibility: visible;
 }
 
-#overlay.visible .inner {
+.overlay.visible ul {
   width: 300px;
-  opacity: 1;
   visibility: visible;
 }
 
-#overlay.visible ul li {
+.overlay.visible ul li {
   animation: fadeInLeft 0.3s ease forwards;
 }
 
-#overlay.visible ul li:nth-child(1) {
+.overlay.visible ul li:nth-child(1) {
   animation-delay: 0.23s;
 }
-#overlay.visible ul li:nth-child(2) {
+.overlay.visible ul li:nth-child(2) {
   animation-delay: 0.26s;
 }
-#overlay.visible ul li:nth-child(3) {
+.overlay.visible ul li:nth-child(3) {
   animation-delay: 0.29s;
 }
-#overlay.visible ul li:nth-child(4) {
+.overlay.visible ul li:nth-child(4) {
   animation-delay: 0.32s;
 }
-#overlay.visible ul li:nth-child(5) {
+.overlay.visible ul li:nth-child(5) {
   animation-delay: 0.35s;
+}
+
+/* MAIN - first section : title */
+.main__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.main__title .contents {
+  width: 600px;
+  text-align: center;
+}
+
+.main__title h2 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  line-height: 70px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.main__title p {
+  margin-top: 40px;
+}
+
+/* MAIN - second section : design */
+
+.main__design {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.main__design .contents {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+/* design__right */
+.design__right {
+  margin-top: 70px;
+}
+
+.design__right span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.design__right p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* design__left */
+
+.design__left {
+  text-align: center;
+  margin-top: 300px;
+}
+
+.design__left span {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.design__left p {
+  margin-top: 40px;
+}
+
+/* MAIN - third section : items */
+
+.main__items {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.items {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.items__img {
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.items__img:nth-child(1) {
+  margin-left: 0;
+}
+
+.items__img img {
+  width: 160px;
+  min-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.items__txt {
+  flex-wrap: wrap;
+}
+
+.items__txt h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin-bottom: 5px;
+}
+
+.items__txt p {
+  line-height: 1;
 }

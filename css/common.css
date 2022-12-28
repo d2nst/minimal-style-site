@@ -18,7 +18,7 @@
   /* font size */
   --font-large: 60px;
   --font-medium: 32px;
-  --font-regular: 18px;
+  --font-regular: 16px;
   --font-small: 14px;
   --font-micro: 12px;
 
@@ -29,53 +29,103 @@
   --weight-regular: 400;
 }
 
-/* font */
-
 body {
   box-sizing: border-box;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Crimson Text', sans-serif;
   background: #e8e5de;
+  line-height: 1.5;
 }
 
 html {
   font-size: 10px;
 }
 
-h1 {
-  font-weight: var(--font-large);
-  font-weight: var(--weight-bold);
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #000;
+  font-family: 'Playfair Display', serif;
 }
 
-h2 {
-  font-weight: var(--font-medium);
-  font-weight: var(--weight-medium);
+h3 {
+  font-size: var(--font-medium);
+}
+
+span {
+  font-size: 1.6rem;
 }
 
 p {
-  font-family: 'Crimson Text', sans-serif;
+  font-size: var(--font-regular);
+}
+
+/* title__bar */
+
+.title__bar {
+  position: absolute;
+  height: 1px;
+  width: 50px;
+  background-color: var(--color-black);
+}
+
+.title__bar.center {
+  left: 50%;
+  transform: translate(-50%);
 }
 
 /* btns */
 .btn {
-  width: 128px;
   font-size: var(--font-micro);
-  padding-top: 16px;
-  padding-bottom: 16px;
   border-radius: 4px;
   display: inline-block;
-  line-height: 16px;
-  font-weight: var(--weight-semi-bold);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .btn__link {
+  width: 128px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-weight: var(--weight-semi-bold);
+}
+
+.btn__link:hover,
+.btn__icon:hover {
+  background: var(--color-black);
+  color: var(--color-black);
+}
+
+.btn__icon {
+  width: 45px;
+  height: 45px;
+  line-height: 33px;
   background: var(--color-black);
   color: var(--color-white);
 }
 
-.btn__link:hover {
+.arrow__tag a {
+  position: relative;
+}
+
+.btn__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
   background: var(--color-black);
+  color: var(--color-white);
+  position: absolute;
+  top: 0;
+}
+
+.btn__arrow:hover {
+  position: absolute;
+  background: var(--color-white);
   color: var(--color-black);
+  top: -2px;
 }
 
 /* BACKGROUND - LINE */

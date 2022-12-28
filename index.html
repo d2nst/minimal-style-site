@@ -11,6 +11,17 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
+	<!-- Bootstrap Icon CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+	<!-- aos CSS & JS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<!-- gsap JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
 	<!-- My CSS & JS -->
 	<link rel="stylesheet" href="css/style.css" />
@@ -27,11 +38,11 @@
 	<!-- E:line(배경 라인) -->
 
 	<header>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="header-inner">
 
 				<div class="logo">
-					<a href="#">Style .</a>
+					<h1><a href="#">Style .</a></h1>
 				</div>
 
 				<div class="menu">
@@ -42,20 +53,17 @@
 						<span></span>
 					</div>
 
-					<div id="overlay">
-						<div class="inner">
-							<ul>
-								<li><a href="index.html" class="active">Home</a></li>
-								<li><a href="pages.html">Pages</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-								<li><a href="elements.html">elements</a></li>
-								<li><a href="contact.html">contact</a></li>
-							</ul>
-						</div>
-					</div>
+					<nav class="overlay">
+						<ul>
+							<li><a href="index.html" class="active">Home</a></li>
+							<li><a href="pages.html">Pages</a></li>
+							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="elements.html">elements</a></li>
+							<li><a href="contact.html">contact</a></li>
+						</ul>
+					</nav>
+
 				</div>
-
-
 
 			</div>
 		</div>
@@ -63,33 +71,100 @@
 	<!-- E:header(로고&메뉴) -->
 
 	<main>
-		<div class="section">
+		<section class="title">
 			<div class="container">
 				<div class="row">
-					<a href="#" class="btn btn__link">Get In Touch</a>
+					<div class="main__title">
+						<div class="contents">
+							<h2>Minimal Style Collection — 2021</h2>
+							<div class="title__bar center"></div>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+								blind texts.</p>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="section">
+		</section>
+		<!-- E:main-title -->
+
+		<section class="design">
+			<div class="container">
+				<div class="row">
+					<div class="main__design">
+						<div class="contents">
+							<div class="col-lg-4 design__left">
+								<h3>Minimal Design</h3>
+								<span>Minimalist Design</span>
+								<img src=" ./images/img_v_2-min.jpg" alt="Image" class="img-fluid" />
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+									the blind texts.</p>
+							</div>
+							<div class="col-lg-5 design__right">
+								<h3>Minimal Watch</h3>
+								<span>Innovative Design
+								</span>
+								<div class="title__bar"></div>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+									the blind texts.</p>
+								<img src="./images/img_v_1-min.jpg" alt="Image" class="img-fluid" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- E:main-design -->
+
+		<section class="item">
+			<div class="container">
+				<div class="row">
+					<div class="main__items">
+						<div class="items" data-aos="fade-up" data-aos-duration="1000">
+							<div class="items__img">
+								<img src="./images/img_v_4-min.jpg" alt="" />
+							</div>
+							<div class="items__txt">
+								<h3>Sneakers</h3>
+								<p>Far far away, behind the word mountains, far from the countries.</p>
+							</div>
+						</div>
+						<div class="items" data-aos="fade-up" data-aos-duration="1500">
+							<div class="items__img">
+								<img src="./images/img_v_5-min.jpg" alt="Image" />
+							</div>
+							<div class="items__txt">
+								<h3>Clothing
+								</h3>
+								<p>Far far away, behind the word mountains, far from the countries.</p>
+							</div>
+						</div>
+						<div class="items" data-aos="fade-up" data-aos-duration="2000">
+							<div class="items__img">
+								<img src="./images/img_v_6-min.jpg" alt="Image" />
+							</div>
+							<div class="items__txt">
+								<h3>Accessories
+								</h3>
+								<p>Far far away, behind the word mountains, far from the countries.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- E:main-items -->
+
+		<section class="">
 			<div class="container">
 				<div class="row"></div>
 			</div>
-		</div>
-		<div class="section">
+		</section>
+		<section class="">
 			<div class="container">
 				<div class="row"></div>
 			</div>
-		</div>
-		<div class="section">
-			<div class="container">
-				<div class="row"></div>
-			</div>
-		</div>
-		<div class="section">
-			<div class="container">
-				<div class="row"></div>
-			</div>
-		</div>
+		</section>
 	</main>
 
 
