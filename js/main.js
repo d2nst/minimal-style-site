@@ -26,7 +26,7 @@ overlay.addEventListener('click', () => {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to('.design__left', {
-  yPercent: -100,
+  yPercent: -50,
   ease: 'none',
   scrollTrigger: {
     trigger: '.main__design',
@@ -36,3 +36,16 @@ gsap.to('.design__left', {
 
 // AOS animation
 AOS.init();
+
+// swiper JS
+const swiper = new Swiper('.swiper', {
+  // Default parameters
+  slidesPerView: 4,
+  spaceBetween: 15,
+  autoplay: {
+    delay: 3000,
+  }, //자동 재생 여부
+  loop: true,
+});
+
+// prevNext Btn
