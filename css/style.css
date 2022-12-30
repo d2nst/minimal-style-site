@@ -32,6 +32,7 @@ header {
   font-size: 2.5rem;
   color: var(--color-black);
   font-weight: var(--weight-bold);
+  outline: none;
 }
 
 /* header MENU */
@@ -309,44 +310,54 @@ header {
 
 .col__title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.col__title h2 {
   margin-bottom: 40px;
 }
 
-.col__title button {
-  border: 0;
-  outline: 0;
-  background: 0;
-  font-size: var(--font-small);
-  color: var(--color-black);
+.col__title span {
+  position: absolute;
+  right: 65px;
 }
 
 .main__collection {
   width: 100%;
-  height: 500px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
 }
 
-.collections {
+.collection {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
 .swiper-slide {
-  position: relative;
-  width: 270px;
-  height: 324px;
+  overflow: hidden;
 }
 
-.main__collection .col__img img {
+.col__img {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.col__img img {
   display: block;
   width: 100%;
-  height: 100%;
+  transition: 0.3s all ease;
+}
+
+.swiper-slide:hover .col__img img {
+  transform: scale(1.1);
 }
 
 .col__txt {
@@ -363,4 +374,30 @@ header {
 .col__txt p {
   font-size: 1.5rem;
   color: #888;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 0;
+  font-size: var(--font-small);
+  color: var(--color-black);
+  outline: none;
+}
+
+.swiper-button-prev {
+  top: 143px;
+  left: 1157px;
+}
+
+.swiper-button-next {
+  top: 143px;
+  right: 180px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
 }
