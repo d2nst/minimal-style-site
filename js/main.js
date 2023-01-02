@@ -34,8 +34,21 @@ gsap.to('.design__left', {
   },
 });
 
+gsap.to('.img__top', {
+  yPercent: -100,
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.season__img',
+    scrub: true,
+  },
+});
+
 // AOS animation
-AOS.init();
+AOS.init({
+  duration: 1200,
+  // offset: 500,
+  // once: true,
+});
 
 // swiper JS
 const swiper = new Swiper('.swiper', {

@@ -11,7 +11,7 @@
 }
 
 section {
-  padding: 65px 0 50px;
+  padding: 100px 0;
 }
 
 /* HEADER START */
@@ -177,6 +177,11 @@ header {
 }
 
 /* MAIN - first section : title */
+
+.title {
+  padding-bottom: 50px;
+}
+
 .main__title {
   display: flex;
   flex-direction: column;
@@ -204,7 +209,7 @@ header {
 /* MAIN - second section : design */
 
 .design {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 0;
 }
 
@@ -252,15 +257,11 @@ header {
 
 /* MAIN - third section : items */
 
-.item {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
 .main__items {
   display: flex;
   justify-content: space-between;
 }
+
 .items {
   display: flex;
   align-items: center;
@@ -325,6 +326,10 @@ header {
 }
 
 .main__collection {
+  position: relative;
+}
+
+.main__collection .swiper {
   width: 100%;
   height: auto;
   display: flex;
@@ -333,8 +338,7 @@ header {
   overflow: hidden;
 }
 
-.collection {
-  position: relative;
+.main__collection .swiper .swiper-wrapper {
   width: 100%;
   height: 100%;
 }
@@ -386,13 +390,13 @@ header {
 }
 
 .swiper-button-prev {
-  top: 143px;
-  left: 1157px;
+  top: 43px;
+  left: 980px;
 }
 
 .swiper-button-next {
-  top: 143px;
-  right: 180px;
+  top: 43px;
+  right: 18px;
 }
 
 .swiper-button-prev:after,
@@ -401,3 +405,128 @@ header {
 .swiper-rtl .swiper-button-prev:after {
   display: none;
 }
+
+/* MAIN - fifth section : lookbook */
+
+.main__lookbook {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+.look__title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.look__title .col-lg-4 {
+  padding-right: 10px;
+}
+
+.look__title .col-lg-4 h2 {
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.look__contents {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.look__contents > div:nth-child(1) {
+  padding-right: 20px;
+}
+
+.look__contents > div:nth-child(2) {
+  padding: 0 13px;
+}
+
+.look__contents > div p {
+  font-size: 1.5rem;
+}
+
+.look__contents p:nth-child(odd) {
+  margin-bottom: 15px;
+}
+
+/* MAIN - sixth section : read more */
+
+.main__readmore {
+  display: flex;
+}
+
+.main__readmore .items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.items__icon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.main__readmore .items__txt h2 {
+  font-size: 2rem;
+  font-weight: var(--weight-regular);
+}
+
+.main__readmore .items__txt p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.main__readmore .items__link a {
+  font-size: var(--font-micro);
+  font-weight: var(--weight-semi-bold);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: 'Crimson Text', sans-serif;
+}
+
+.main__readmore .items__link a:hover {
+  color: var(--color-black);
+}
+
+/* MAIN - seventh section : season */
+.main__season {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.img__top {
+  position: absolute;
+  display: block;
+  width: 220px;
+  top: 150px;
+  left: 100px;
+}
+
+.img__bottom {
+  display: block;
+  width: 400px;
+  margin-left: 130px;
+}
+
+.season__title h2 {
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.season__txt {
+  margin-top: 60px;
+}
+
+.season__txt p:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+/* MAIN - eighth section : season */
