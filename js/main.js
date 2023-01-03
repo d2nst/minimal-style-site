@@ -44,11 +44,7 @@ gsap.to('.img__top', {
 });
 
 // AOS animation
-AOS.init({
-  duration: 1200,
-  // offset: 500,
-  // once: true,
-});
+AOS.init();
 
 // swiper JS
 const swiper = new Swiper('.swiper', {
@@ -64,3 +60,20 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// accordion
+
+var acc = document.getElementsByClassName('accordion');
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener('click', function () {
+    this.classList.toggle('active');
+    var panel = this.nextElementSibling;
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = 'block';
+    }
+  });
+}
