@@ -2,6 +2,10 @@
 @import url(common.css);
 
 /* ====== layout ====== */
+section {
+  padding: 100px 0;
+}
+
 .container {
   max-width: 1140px;
 }
@@ -10,9 +14,10 @@
   position: relative;
 }
 
-section {
-  padding: 100px 0;
-}
+/* .row {
+  display: flex;
+  flex-wrap: nowrap;
+} */
 
 /* HEADER START */
 
@@ -610,6 +615,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 80px;
   padding: 0 15px;
 }
@@ -685,6 +691,7 @@ footer {
 footer .row {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0 20px;
 }
 
@@ -738,4 +745,46 @@ footer h3 {
 .f__line p {
   padding: 40px 0;
   text-align: center;
+}
+
+/* ================ Pages ================= */
+.pages .blog__entry {
+  margin-bottom: 50px;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.page-item {
+  margin-left: 5px;
+}
+
+.page-item:first-child {
+  margin-left: 0;
+}
+
+.page-item .page-link {
+  border-radius: 50% !important;
+  color: var(--color-black);
+  border: 1px solid rgba(83, 83, 83, 0.4);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 32px;
+  font-size: var(--font-regular);
+  font-family: 'Crimson Text', sans-serif;
+  background: transparent;
+}
+
+.page-item .page-link:hover {
+  border: 1px solid var(--color-black);
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: var(--color-black);
+  background-color: transparent;
+  border-color: var(--color-black);
 }

@@ -1,5 +1,5 @@
 // menu 활성화
-const menuActive = document.querySelectorAll('.overlay ul li a');
+const menuActive = document.querySelectorAll('nav ul li a');
 
 menuActive.forEach((element) => {
   element.addEventListener('click', function () {
