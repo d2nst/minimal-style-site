@@ -34,15 +34,23 @@ gsap.to('.design__left', {
   },
 });
 
-gsap.to('.img__top', {
+gsap.to('.season .img__top', {
   yPercent: -100,
   ease: 'none',
   scrollTrigger: {
-    trigger: '.season__img',
+    trigger: '.season .season__img',
     scrub: true,
   },
 });
 
+gsap.to('.seasonTwo .img__top', {
+  yPercent: -100,
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.seasonTwo .season__img',
+    scrub: true,
+  },
+});
 // AOS animation
 AOS.init();
 
@@ -60,20 +68,3 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-// accordion
-
-var acc = document.getElementsByClassName('accordion');
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener('click', function () {
-    this.classList.toggle('active');
-    var panel = this.nextElementSibling;
-    if (panel.style.display === 'block') {
-      panel.style.display = 'none';
-    } else {
-      panel.style.display = 'block';
-    }
-  });
-}

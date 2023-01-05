@@ -9,27 +9,31 @@
 	<!-- Bootstrap CSS & JS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Bootstrap Icon CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+	<!-- Jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
 
 	<!-- aos CSS & JS -->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<!-- Swiper CSS & JS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 	<!-- gsap JS-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
-
-	<!-- Jquery -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 
 	<!-- My CSS & JS -->
@@ -44,7 +48,7 @@
 			<div class="lines"></div>
 		</div>
 	</div>
-	<!-- E:line(배경 라인) -->
+	<!-- E:line -->
 
 	<header>
 		<div class="container">
@@ -77,7 +81,7 @@
 			</div>
 		</div>
 	</header>
-	<!-- E:header(로고&메뉴) -->
+	<!-- E:header -->
 
 	<main>
 		<section class="title">
@@ -85,9 +89,13 @@
 				<div class="row">
 					<div class="main__title px-0">
 						<div class="contents">
-							<h2>Minimal Style Collection — 2021</h2>
-							<div class="title__bar center"></div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+							<h2>Minimal Style Collection — 2023</h2>
+							<div class="title__bar"><span></span></div>
+							<p class="animate__animated animate__fadeInUp animate__delay-2s">Far far away, behind the word
+								mountains,
+								far from the
+								countries Vokalia and
+								Consonantia, there live the
 								blind texts.</p>
 						</div>
 					</div>
@@ -112,7 +120,9 @@
 								<h2>Minimal Watch</h2>
 								<span>Innovative Design
 								</span>
-								<div class="title__bar"></div>
+								<div class="title__bar">
+									<span></span>
+								</div>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
 									the blind texts.</p>
 								<img src="./images/img_v_1-min.jpg" alt="Image" class="img-fluid" />
@@ -243,22 +253,24 @@
 			<div class="container">
 				<div class="row">
 					<div class="main__lookbook">
-						<div class="look__title">
+						<div class="look__title tt ">
 							<div class="col-lg-4">
-								<h2>Don't miss the new season 2021 lookbook</h2>
-								<div class="title__bar"></div>
+								<h2>Don't miss the new season 2023 lookbook</h2>
+								<div class="title__bar">
+									<span></span>
+								</div>
 							</div>
 							<div class="col-lg-4"></div>
 						</div>
-						<div class="look__contents">
-							<div class="txt col-lg-4">
+						<div class="look__contents txt">
+							<div class="col-lg-4">
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
 									the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
 									language ocean.</p>
 								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
 									paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 							</div>
-							<div class="txt col-lg-4">
+							<div class="col-lg-4">
 								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
 									life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
 									far World of Grammar.</p>
@@ -275,7 +287,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="main__readmore">
-						<div class="items" data-aos="fade-up">
+						<div class="items" data-aos="fade-up" data-aos-offset="-800" data-aos-duration="500">
 							<div class="items__icon">
 								<i class="bi bi-chat-left-text"></i>
 							</div>
@@ -289,7 +301,7 @@
 								<a href="">read more...</a>
 							</div>
 						</div>
-						<div class="items" data-aos="fade-up">
+						<div class="items" data-aos="fade-up" data-aos-offset="-800" data-aos-duration="1000">
 							<div class="items__icon">
 								<i class="bi bi-calendar2-week"></i>
 							</div>
@@ -303,7 +315,7 @@
 								<a href="">read more...</a>
 							</div>
 						</div>
-						<div class="items" data-aos="fade-up">
+						<div class="items" data-aos="fade-up" data-aos-offset="-800" data-aos-duration="1500">
 							<div class="items__icon">
 								<i class="bi bi-file-earmark-text"></i>
 							</div>
@@ -337,11 +349,13 @@
 						</div>
 
 						<div class="season__contents col-lg-4">
-							<div class="season__title">
-								<h2>Don't miss the new season 2021 lookbook</h2>
-								<div class="title__bar"></div>
+							<div class="season__title tt">
+								<h2>Don't miss the new season 2023 lookbook</h2>
+								<div class="title__bar">
+									<span></span>
+								</div>
 							</div>
-							<div class="season__txt">
+							<div class="season__txt txt">
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
 									the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
 									language ocean.</p>
@@ -358,66 +372,297 @@
 		<section class="choose">
 			<div class="container">
 				<div class="row">
-					<div class="choose__contents col-lg-3">
-						<div class="choose__title">
-							<h2>Why you choose us</h2>
-							<div class="title__bar"></div>
+					<div class="main__choose">
+						<div class="col-lg-4">
+							<div class="choose__title tt">
+								<h2>Why you choose us</h2>
+								<div class="title__bar">
+									<span></span>
+								</div>
+							</div>
+							<div class="choose__txt txt">
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+									the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+									language ocean.</p>
+							</div>
+							<div class="btn btn__link">
+								<a href="#">Get In Touch</a>
+							</div>
 						</div>
-						<div class="choose__txt">
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-								the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-								language ocean.</p>
-						</div>
-					</div>
-					<div class="choose__menu col-lg-6">
-						<button class="accordion">How to download and register?</button>
-						<div class="panel">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-								ex
-								ea commodo consequat.</p>
-						</div>
-						<button class="accordion">Section 2</button>
-						<div class="panel">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-								ex
-								ea commodo consequat.</p>
-						</div>
-						<button class="accordion">Section 3</button>
-						<div class="panel">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-								ex
-								ea commodo consequat.</p>
+						<div class="col-lg-7">
+							<div class="accordion" id="accordionPanelsStayOpenExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse"
+											data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+											aria-controls="panelsStayOpen-collapseOne">
+											<i class="bi bi-node-plus"></i>
+											<i class="bi bi-node-minus"></i>
+											How to download and register?
+										</button>
+									</h2>
+									<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+										aria-labelledby="panelsStayOpen-headingOne">
+										<div class="accordion-body">
+											<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+												live
+												the
+												blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+												language
+												ocean.</p>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+												It is a
+												paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+											data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+											aria-controls="panelsStayOpen-collapseTwo">
+											<i class="bi bi-node-plus"></i>
+											<i class="bi bi-node-minus"></i>
+											How to create your paypal account?
+										</button>
+									</h2>
+									<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+										aria-labelledby="panelsStayOpen-headingTwo">
+										<div class="accordion-body">
+											<p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+												unorthographic
+												life
+												One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
+												far
+												World
+												of Grammar.</p>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+											data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+											aria-controls="panelsStayOpen-collapseThree">
+											<i class="bi bi-node-plus"></i>
+											<i class="bi bi-node-minus"></i>
+											How to link your paypal and bank account?
+										</button>
+									</h2>
+									<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+										aria-labelledby="panelsStayOpen-headingThree">
+										<div class="accordion-body">
+											<p>
+												When she reached the first hills of the Italic Mountains, she had a last view back on the
+												skyline
+												of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own
+												road,
+												the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- E:main-season -->
-		<section class="">
-			<div class="container">
-				<div class="row"></div>
-			</div>
-		</section>
-		<section class="">
-			<div class="container">
-				<div class="row"></div>
-			</div>
-		</section>
-		<section class="">
-			<div class="container">
-				<div class="row"></div>
-			</div>
-		</section>
-		<section class="">
-			<div class="container">
-				<div class="row"></div>
-			</div>
-		</section>
-	</main>
+		<!-- E:main-choose -->
 
+		<section class="seasonTwo">
+			<div class="container">
+				<div class="row">
+					<div class="main__season">
+						<div class="season__img col-lg-6">
+							<div class="img__top">
+								<img src="./images/img_v_7-min.jpg" alt="images" class="f-img img-fluid" />
+							</div>
+							<div class="img__bottom">
+								<img src="./images/img_v_5-min.jpg" alt="images" class="img-fluid" />
+							</div>
+						</div>
+
+						<div class="season__contents col-lg-4">
+							<div class="season__title tt">
+								<h2>Don't miss the new season 2023 lookbook</h2>
+								<div class="title__bar">
+									<span></span>
+								</div>
+							</div>
+							<div class="season__txt txt">
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+									the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+									language ocean.</p>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is
+									a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- E:main-seasonTwo -->
+
+		<section class="blog">
+			<div class="container">
+				<div class="row">
+					<div class="main__blog">
+						<div class="blog__title tt">
+							<h2>Blog Posts</h2>
+							<div class="title__bar"><span></span></div>
+						</div>
+
+						<div class="blog__contents">
+							<div class="blog__entry">
+								<a href="#" class="col-img">
+									<img src="./images/img_h_3-min.jpg" alt="img" class="img-fulid" />
+								</a>
+
+								<div class="blog__txt">
+									<h3>Far far away, behind the word mountains</h3>
+									<span>April 25, 2019</span>
+									<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<div class="items__link">
+										<a href="">read more...</a>
+									</div>
+								</div>
+							</div>
+							<div class="blog__entry">
+								<a href="#" class="col-img">
+									<img src="./images/img_h_5-min.jpg" alt="img" />
+								</a>
+
+								<div class="blog__txt">
+									<h3>Far far away, behind the word mountains</h3>
+									<span>April 25, 2019</span>
+									<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<div class="items__link">
+										<a href="">read more...</a>
+									</div>
+								</div>
+							</div>
+							<div class="blog__entry">
+								<a href="#" class="col-img">
+									<img src="./images/img_h_7-min.jpg" alt="img" />
+								</a>
+
+								<div class="blog__txt">
+									<h3>Far far away, behind the word mountains</h3>
+									<span>April 25, 2019</span>
+									<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									<div class="items__link">
+										<a href="">read more...</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- E:main-blog -->
+
+		<section class="start">
+			<div class="container">
+				<div class="row">
+					<div class="main__start">
+						<div class="contents">
+							<h2>Let's Get Started</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+								the blind texts.</p>
+							<div class="btn btn__link">
+								<a href="#">Get In Touch</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<!-- E:main-start -->
+	</main>
+	<!-- E:main -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="f__left col-lg-4">
+					<div class="widget">
+						<h3>About</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+							blind texts. Separated they live.</p>
+					</div>
+					<div class="widget">
+						<h3>
+							Connect with us
+						</h3>
+						<ul class="social">
+							<li class="btn btn__icon">
+								<i class="bi bi-facebook"></i>
+							</li>
+							<li class="btn btn__icon">
+								<i class="bi bi-twitter"></i>
+							</li>
+							<li class="btn btn__icon">
+								<i class="bi bi-dribbble"></i>
+							</li>
+							<li class="btn btn__icon">
+								<i class="bi bi-instagram"></i>
+							</li>
+							<li class="btn btn__icon">
+								<i class="bi bi-linkedin"></i>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="f__right col-lg-6">
+					<h3>Navigations</h3>
+					<div class="footer-menu">
+						<div class="widget col-lg-4">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Service</a></li>
+								<li><a href="#">Work</a></li>
+								<li><a href="#">Process</a></li>
+								<li><a href="#">About Us</a></li>
+							</ul>
+						</div>
+						<div class="widget col-lg-4">
+							<ul>
+								<li><a href="#">Press</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Privacy</a></li>
+							</ul>
+						</div>
+						<div class="widget col-lg-4">
+							<ul>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Careers</a></li>
+								<li><a href="#">Process</a></li>
+								<li><a href="#">About Us</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="f__bottom">
+					<div class="f__line">
+						<p>Copyright &copy; 2023. All Rights Reserved. — Designed with love by Untree.co</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- E:footer -->
 
 </body>
 
