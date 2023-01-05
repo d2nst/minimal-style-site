@@ -51,6 +51,15 @@ gsap.to('.seasonTwo .img__top', {
     scrub: true,
   },
 });
+
+gsap.to('.box', {
+  duration: 1,
+  y: -80,
+  stagger: 0.3,
+  opacity: 1,
+  ease: 'power4.easeOut',
+});
+
 // AOS animation
 AOS.init();
 

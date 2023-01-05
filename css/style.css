@@ -76,6 +76,7 @@ header {
 
 .burger-bar.open {
   position: fixed;
+  right: 20px;
 }
 
 .burger-bar.open span:nth-child(1),
@@ -102,7 +103,7 @@ header {
   opacity: 0;
   transition: 0.3s;
   visibility: hidden;
-  z-index: 1;
+  z-index: 100;
 }
 
 .overlay ul {
@@ -194,15 +195,21 @@ header {
 }
 
 .main__title h2 {
-  font-size: var(--font-large);
-  font-weight: var(--weight-bold);
-  line-height: 70px;
   position: relative;
   margin-bottom: 20px;
+  top: 80px;
+}
+
+.main__title h2 span {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  line-height: 50px;
+  display: inline-block;
+  opacity: 0;
 }
 
 .main__title p {
-  margin-top: 35px;
+  margin-top: 40px;
   font-size: 1.8rem;
 }
 
