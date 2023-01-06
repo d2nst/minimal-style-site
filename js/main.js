@@ -77,3 +77,16 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+const newSwiper = new Swiper('.elements .swiper', {
+  // Default parameters
+  slidesPerView: 1,
+  autoplay: {
+    delay: 3000,
+  }, //자동 재생 여부
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
