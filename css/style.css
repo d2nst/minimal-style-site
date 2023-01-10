@@ -841,15 +841,73 @@ footer h3 {
   text-align: center;
 }
 
+.grid-item {
+  overflow: hidden;
+  position: relative;
+}
+
 .grid-item a {
-  display: inline-block;
+  display: block;
   width: 350px;
+  position: relative;
+  overflow: hidden;
 }
 
 .grid-item img {
   width: 100%;
+  transition: 0.3s all ease;
+  transform: scale(1);
 }
 
+.grid-item:hover img {
+  width: 100%;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.grid-item a::before {
+  content: '';
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: 0.3s all ease;
+  opacity: 0;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.grid-item a .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.grid-item a .caption h3 {
+  font-size: 1.8rem;
+  color: var(--color-white);
+  margin-bottom: 5px;
+}
+
+.grid-item a .caption span {
+  font-size: 1.3rem;
+  color: #b3b3b3;
+}
+
+.grid-item a:hover::before,
+.grid-item a:hover .caption {
+  visibility: visible;
+  opacity: 1;
+}
 /* portfolio - testimonials */
 
 #portfolio .testimonials .row:first-child {

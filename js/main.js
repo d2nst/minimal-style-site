@@ -127,3 +127,14 @@ $('.grid').isotope({
   itemSelector: '.grid-item',
   percentPosition: true,
 });
+
+$('.filters li').click(function () {
+  $('.filters li').removeClass('on');
+  $(this).addClass('on');
+
+  const selector = $(this).attr('data-filter');
+  $('.grid-item').isotope({
+    filter: selector,
+  });
+  return false;
+});
