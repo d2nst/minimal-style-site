@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minimal Style Collection - Pages</title>
-  <!-- Bootstrap CSS & JS -->
+  <title>Minimal Style Collection</title>
+  <!-- Bootstrap CSS (부트스트랩, 아이콘) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icon CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-  <!-- animate CSS -->
+  <!-- animate, aos CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- fancy box CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+
+  <!-- swiper css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
   <!-- Jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-  <!-- aos CSS & JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- fancybox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-  <!-- Swiper CSS & JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- 부트스트랩 js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- aos JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- gsap JS-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+  <!-- jarallax -->
+  <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+
+  <!-- isotop -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 
   <!-- My CSS & JS -->
   <link rel="stylesheet" href="css/style.css" />
@@ -49,7 +65,7 @@
       <div class="header-inner">
 
         <div class="logo">
-          <h1><a href="#">Style .</a></h1>
+          <h1><a href="index.html">Style .</a></h1>
         </div>
 
         <div class="menu">
@@ -66,7 +82,7 @@
               <li><a href="pages.html">Pages</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="elements.html">elements</a></li>
-              <li><a href="contact.html">contact</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </nav>
 
@@ -77,7 +93,7 @@
   </header>
   <!-- E:header -->
 
-  <main>
+  <main id="elements">
     <section class="title">
       <div class="container">
         <div class="row">
@@ -101,12 +117,13 @@
     </section>
     <!-- E:main-title -->
 
-    <section class="elements swiper">
+    <section class="slider">
       <div class="container">
         <div class="row">
           <div class="elements__title">
             <h2>01. Slider</h2>
           </div>
+
           <div class="swiper">
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
@@ -119,21 +136,21 @@
                 <img src="./images/img_h_3-min.jpg" alt="Image" />
               </li>
             </ul>
+            <div class="swiper-pagination"></div>
           </div>
-
-          <div class="swiper-pagination"></div>
-
-          <div class="swiper-button-prev">
+          <div class="swiper-button-prev white">
             <i class="bi bi-arrow-left-short"></i>
           </div>
-          <div class="swiper-button-next">
+          <div class="swiper-button-next white">
             <i class="bi bi-arrow-right-short"></i>
           </div>
+
+
         </div>
       </div>
       </div>
     </section>
-    <!-- E:main-blog -->
+    <!-- E:main-slider -->
 
 
     <section class="accordion">
@@ -213,8 +230,261 @@
 
       </div>
     </section>
-    <!-- E:main-choose -->
+    <!-- E:main-accordion -->
 
+    <section class="gallery">
+      <div class="container">
+        <div class="elements__title">
+          <h2>03. Gallery</h2>
+        </div>
+        <div class="row col-lg-12">
+          <div class="col-lg-4">
+            <a href="./images/img_h_1-min.jpg" data-fancybox="gallery"><img src="./images/img_h_1-min.jpg"></a>
+          </div>
+          <div class="col-lg-4">
+            <a href="./images/img_h_2-min.jpg" data-fancybox="gallery"><img src="./images/img_h_2-min.jpg"></a>
+          </div>
+          <div class="col-lg-4">
+            <a href="./images/img_h_3-min.jpg" data-fancybox="gallery"><img src="./images/img_h_3-min.jpg"></a>
+          </div>
+          <div class="col-lg-4">
+            <a href="./images/img_h_4-min.jpg" data-fancybox="gallery"><img src="./images/img_h_4-min.jpg"></a>
+          </div>
+          <div class="col-lg-4">
+            <a href="./images/img_h_5-min.jpg" data-fancybox="gallery"><img src="./images/img_h_5-min.jpg"></a>
+          </div>
+          <div class="col-lg-4">
+            <a href="./images/img_h_6-min.jpg" data-fancybox="gallery"><img src="./images/img_h_6-min.jpg"></a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    <!-- E:main-gallery -->
+
+    <section class="video">
+      <div class="container">
+        <div class="elements__title">
+          <h2>04. Video</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7">
+            <a data-fancybox class="video-wrap" href="https://vimeo.com/342333493">
+              <div class="play-wrap">
+                <span class="icon-wrap">
+                  <i class="bi bi-play-fill"></i>
+                </span>
+              </div>
+              <img src="./images/img_v_7-min.jpg" alt="Image" class="img-fluid rounded" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- E:main-video -->
+
+    <section class="form">
+      <div class="container">
+        <div class="elements__title">
+          <h2>05. Form</h2>
+        </div>
+        <div class="row col-lg-7">
+          <form action="#" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="fname">First name</label>
+                  <input type="text" class="control__box" id="fname">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lname">Last name</label>
+                  <input type="text" class="control__box" id="lname">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address
+              </label>
+              <input type="email" class="control__box" id="email">
+              <p><small>We'll never share your email with anyone else.
+                </small></p>
+            </div>
+
+            <div class="form-group">
+              <label for="pw">Password</label>
+              <input type="password" id="pw" class="control__box">
+            </div>
+
+            <div class="form-group">
+              <label for="msg">Message</label>
+              <textarea name class="control__box" id="msg" cols="30" rows="5" style="height:134px"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="select">Select</label>
+              <select name="f-select" id="select" class="control__box">
+                <option value="">Untree.co</option>
+                <option value="">Offers high quality free template</option>
+              </select>
+            </div>
+
+            <div class="form-group check">
+              <input type="checkbox" id="custom--checkbox" checked="checked" />
+              <label for="custom--checkbox">
+                <span>Custom checkBox</span>
+              </label>
+
+            </div>
+
+            <button type="submit" class="btn btn__link">Submit</button>
+
+
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- E:main-form -->
+
+    <section class="social-icons">
+      <div class="container">
+        <div class="elements__title">
+          <h2>06. Social Icons</h2>
+        </div>
+        <div class="row">
+          <ul class="social">
+            <li class="btn btn__icon-light">
+              <i class="bi bi-facebook"></i>
+            </li>
+            <li class="btn btn__icon-light">
+              <i class="bi bi-twitter"></i>
+            </li>
+            <li class="btn btn__icon-light">
+              <i class="bi bi-dribbble"></i>
+            </li>
+            <li class="btn btn__icon-light">
+              <i class="bi bi-instagram"></i>
+            </li>
+            <li class="btn btn__icon-light">
+              <i class="bi bi-play-fill"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- E:main-social-icons -->
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="elements__title">
+          <h2>07. Testimonials</h2>
+        </div>
+        <div class="row col-lg-7">
+          <div class="swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="./images/person_3-min.jpg" alt="Image" />
+                <h3 class="name">Lukas Devlin</h3>
+                <blockquote>
+                  <p>
+                    “There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
+                    Semantics, a large language ocean.”
+                  </p>
+                </blockquote>
+              </li>
+              <li class="swiper-slide">
+                <img src="./images/person_5-min.jpg" alt="Image" />
+                <h3 class="name">Kayla Bryant</h3>
+                <blockquote>
+                  <p>
+                    “There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
+                    Semantics, a large language ocean.”
+                  </p>
+                </blockquote>
+              </li>
+              <li class="swiper-slide">
+                <img src="./images/person_4-min.jpg" alt="Image" />
+                <h3 class="name">Adam Aderson</h3>
+                <blockquote>
+                  <p>
+                    “There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
+                    Semantics, a large language ocean.”
+                  </p>
+                </blockquote>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev white">
+            <i class="bi bi-arrow-left-short"></i>
+          </div>
+          <div class="swiper-button-next white">
+            <i class="bi bi-arrow-right-short"></i>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- E:main-testimonials -->
+
+    <section class="checklist">
+      <div class="container">
+        <div class="elements__title">
+          <h2>08. Check List</h2>
+        </div>
+        <div class="row col-lg-7">
+          <ul>
+            <li>
+              <p>Far far away, behind the word</p>
+            </li>
+            <li>
+              <p>Far from the countries Vokalia</p>
+            </li>
+            <li>
+              <p>Separated they live in Bookmarksgrove</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- E:main-checklist-->
+
+    <section class="banner">
+      <div class="container">
+        <div class="row">
+          <h2>Get this template for free! :)
+          </h2>
+          <div class="btn btn__link">
+            <a href="#">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- E:main-banner -->
+
+    <section class="start">
+      <div class="container">
+        <div class="row">
+          <div class="main__start">
+            <div class="contents">
+              <h2>Let's Get Started</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                the blind texts.</p>
+              <div class="btn btn__link">
+                <a href="#">Get In Touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- E:main-start -->
   </main>
   <!-- E:main -->
 

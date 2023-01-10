@@ -135,6 +135,17 @@ a:focus {
   border-radius: 10px;
 }
 
+.btn__icon-light {
+  width: 40px;
+  height: 40px;
+  line-height: 33px;
+  text-align: center;
+  font-size: var(--font-regular);
+  background: var(--color-white);
+  color: var(--color-black);
+  border-radius: 50%;
+}
+
 .arrow__tag a {
   position: relative;
 }
@@ -200,4 +211,36 @@ a:focus {
 
 .items__link a:hover {
   color: var(--color-black);
+}
+
+/* swiper button */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+.white {
+  width: 45px;
+  height: 45px;
+  background: var(--color-white);
+  outline: none;
+  -webkit-box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+.white i {
+  font-size: 1.8rem;
+  color: var(--color-black);
+}
+
+.white:hover {
+  -webkit-box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-black);
 }

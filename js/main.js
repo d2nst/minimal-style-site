@@ -64,7 +64,7 @@ gsap.to('.box', {
 AOS.init();
 
 // swiper JS
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('#home .swiper', {
   // Default parameters
   slidesPerView: 4,
   spaceBetween: 15,
@@ -78,15 +78,52 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-const newSwiper = new Swiper('.elements .swiper', {
+const newSwiper = new Swiper('#elements .slider .swiper', {
   // Default parameters
   slidesPerView: 1,
+  loop: true,
   autoplay: {
     delay: 3000,
-  }, //자동 재생 여부
-  loop: true,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+
+const testimonialSwiper = new Swiper('.testimonials .swiper', {
+  // Default parameters
+  slidesPerView: 1,
+  loop: true,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+
+const logoSwiper = new Swiper('#contact .clients .swiper', {
+  // Default parameters
+  slidesPerView: 5,
+  loop: true,
+});
+
+// jarallax Call
+$('.banner').jarallax();
+
+//
+
+$('.grid').isotope({
+  // set itemSelector so .grid-sizer is not used in layout
+  itemSelector: '.grid-item',
+  percentPosition: true,
 });
