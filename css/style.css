@@ -14,11 +14,6 @@ section {
   position: relative;
 }
 
-/* .row {
-  display: flex;
-  flex-wrap: nowrap;
-} */
-
 /* HEADER START */
 
 header {
@@ -41,7 +36,6 @@ header {
 }
 
 /* header MENU */
-
 .menu {
   position: relative;
 }
@@ -782,7 +776,7 @@ footer h3 {
   border: 1px solid var(--color-black);
 }
 
-.page-item.active .page-link {
+.page-item.select .page-link {
   z-index: 3;
   color: var(--color-black);
   background-color: transparent;
@@ -839,11 +833,14 @@ footer h3 {
 
 .grid {
   text-align: center;
+  height: auto;
+  display: flex !important;
 }
 
 .grid-item {
   overflow: hidden;
   position: relative;
+  flex: 33.3% !important;
 }
 
 .grid-item a {

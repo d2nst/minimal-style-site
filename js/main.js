@@ -1,5 +1,5 @@
 // menu 활성화
-const menuActive = document.querySelectorAll('nav ul li a');
+const menuActive = document.querySelectorAll('header ul li a');
 
 menuActive.forEach((element) => {
   element.addEventListener('click', function () {
@@ -22,7 +22,7 @@ overlay.addEventListener('click', () => {
   overlay.classList.toggle('visible');
 });
 
-// gsap
+// gsap -
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to('.design__left', {
@@ -63,14 +63,14 @@ gsap.to('.box', {
 // AOS animation
 AOS.init();
 
-// swiper JS
+// swiper JS - #home, #elements, .testimonials, #contact
 const swiper = new Swiper('#home .swiper', {
   // Default parameters
   slidesPerView: 4,
   spaceBetween: 15,
   autoplay: {
     delay: 3000,
-  }, //자동 재생 여부
+  },
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -96,10 +96,13 @@ const newSwiper = new Swiper('#elements .slider .swiper', {
   },
 });
 
-const testimonialSwiper = new Swiper('.testimonials .swiper', {
+const peopleSwiper = new Swiper('.testimonials .swiper', {
   // Default parameters
   slidesPerView: 1,
   loop: true,
+  autoplay: {
+    delay: 3000,
+  },
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -111,17 +114,13 @@ const testimonialSwiper = new Swiper('.testimonials .swiper', {
   },
 });
 
-const logoSwiper = new Swiper('#contact .clients .swiper', {
-  // Default parameters
+const contactSwiper = new Swiper('#contact .clients .swiper', {
   slidesPerView: 5,
+  spaceBetween: 5,
   loop: true,
 });
 
-// jarallax Call
-$('.banner').jarallax();
-
-//
-
+//isotope - portfolio.html
 $('.grid').isotope({
   // set itemSelector so .grid-sizer is not used in layout
   itemSelector: '.grid-item',
@@ -133,8 +132,12 @@ $('.filters li').click(function () {
   $(this).addClass('on');
 
   const selector = $(this).attr('data-filter');
-  $('.grid-item').isotope({
+  $('.grid').isotope({
     filter: selector,
   });
-  return false;
+});
+
+// jarallax - elements.html
+jarallax(document.querySelectorAll('.banner'), {
+  speed: 0.2,
 });
