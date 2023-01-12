@@ -1,12 +1,12 @@
 // menu 활성화
-const menuActive = document.querySelectorAll('header ul li a');
-
-menuActive.forEach((element) => {
-  element.addEventListener('click', function () {
-    menuActive.forEach((nav) => nav.classList.remove('active'));
-    this.classList.add('active');
+const activePage = window.location.pathname;
+const navLinks = document
+  .querySelectorAll('.overlay ul li a')
+  .forEach((link) => {
+    if (link.href.includes(`${activePage}`)) {
+      link.classList.add('active');
+    }
   });
-});
 
 // 햄버거바 클릭 시, 엑스표시 변함 & 메뉴바 열림
 const burger = document.querySelector('.burger-bar');
@@ -22,36 +22,7 @@ overlay.addEventListener('click', () => {
   overlay.classList.toggle('visible');
 });
 
-// gsap -
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to('.design__left', {
-  yPercent: -50,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.main__design',
-    scrub: true,
-  },
-});
-
-gsap.to('.season .img__top', {
-  yPercent: -100,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.season .season__img',
-    scrub: true,
-  },
-});
-
-gsap.to('.seasonTwo .img__top', {
-  yPercent: -100,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.seasonTwo .season__img',
-    scrub: true,
-  },
-});
-
+// 전체 title 부분 gsap
 gsap.to('.box', {
   duration: 1,
   y: -80,
