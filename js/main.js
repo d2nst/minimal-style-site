@@ -1,10 +1,12 @@
 // menu 활성화
-const activePage = window.location;
+const activePage = window.location.pathname;
 const navLinks = document
   .querySelectorAll('.overlay ul li a')
   .forEach((link) => {
     if (link.href.includes(`${activePage}`)) {
       link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
 
