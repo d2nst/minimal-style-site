@@ -1,5 +1,5 @@
 // menu 활성화
-const activePage = window.location.pathname;
+const activePage = window.location;
 const navLinks = document
   .querySelectorAll('.overlay ul li a')
   .forEach((link) => {
