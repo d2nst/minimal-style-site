@@ -1,5 +1,7 @@
 // menu 활성화
-const activePage = window.location;
+var currentURL = window.location.href;
+var activePage =
+  currentURL.substring(currentURL.lastIndexOf('/') + 1) || 'index.html';
 const navLinks = document
   .querySelectorAll('.overlay ul li a')
   .forEach((link) => {
@@ -9,15 +11,6 @@ const navLinks = document
       link.classList.remove('active');
     }
   });
-
-if (activePage === '/index.html' || activePage === '/') {
-  const homeLink = document.querySelector(
-    '.overlay ul li a[href="/index.html"]'
-  );
-  if (homeLink) {
-    homeLink.classList.add('active');
-  }
-}
 
 // 햄버거바 클릭 시, 엑스표시 변함 & 메뉴바 열림
 const burger = document.querySelector('.burger-bar');
