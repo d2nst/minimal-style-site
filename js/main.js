@@ -1,6 +1,6 @@
 // menu 활성화
-var currentURL = window.location.href;
-var activePage =
+const currentURL = window.location.href;
+const activePage =
   currentURL.substring(currentURL.lastIndexOf('/') + 1) || 'index.html';
 const navLinks = document
   .querySelectorAll('.overlay ul li a')
