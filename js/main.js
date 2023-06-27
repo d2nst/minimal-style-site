@@ -99,24 +99,25 @@ const contactSwiper = new Swiper('#contact .clients .swiper', {
 const gridItems = document.querySelectorAll('.grid-item');
 const grid = document.querySelector('.grid');
 
-const iso = new Isotope(grid, {
-  itemSelector: '.grid-item',
-  percentPosition: true,
-});
-
-const filterItems = document.querySelectorAll('.filters li');
-filterItems.forEach((item) => {
-  item.addEventListener('click', function () {
-    filterItems.forEach((filterItem) => {
-      filterItem.classList.remove('on');
-    });
-    this.classList.add('on');
-
-    const selector = this.getAttribute('data-filter');
-    iso.arrange({ filter: selector });
+if (grid) {
+  const iso = new Isotope(grid, {
+    itemSelector: '.grid-item',
+    percentPosition: true,
   });
-});
 
+  const filterItems = document.querySelectorAll('.filters li');
+  filterItems.forEach((item) => {
+    item.addEventListener('click', function () {
+      filterItems.forEach((filterItem) => {
+        filterItem.classList.remove('on');
+      });
+      this.classList.add('on');
+
+      const selector = this.getAttribute('data-filter');
+      iso.arrange({ filter: selector });
+    });
+  });
+}
 // jarallax - elements.html
 jarallax(document.querySelectorAll('.banner'), {
   speed: 0.2,
