@@ -99,6 +99,7 @@ const contactSwiper = new Swiper('#contact .clients .swiper', {
 const gridItems = document.querySelectorAll('.grid-item');
 const grid = document.querySelector('.grid');
 
+// Isotope 초기화 코드를 실행하도록 조건을 추가, .grid 요소가 해당 페이지에 존재하는 경우에만 Isotope 초기화를 수행하도록 조건문을 사용
 if (grid) {
   const iso = new Isotope(grid, {
     itemSelector: '.grid-item',
