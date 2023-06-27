@@ -96,19 +96,24 @@ const contactSwiper = new Swiper('#contact .clients .swiper', {
 });
 
 //isotope - portfolio.html
-$('.grid').isotope({
-  // set itemSelector so .grid-sizer is not used in layout
+const gridItems = document.querySelectorAll('.grid-item');
+const grid = document.querySelector('.grid');
+
+const iso = new Isotope(grid, {
   itemSelector: '.grid-item',
   percentPosition: true,
 });
 
-$('.filters li').click(function () {
-  $('.filters li').removeClass('on');
-  $(this).addClass('on');
+const filterItems = document.querySelectorAll('.filters li');
+filterItems.forEach((item) => {
+  item.addEventListener('click', function () {
+    filterItems.forEach((filterItem) => {
+      filterItem.classList.remove('on');
+    });
+    this.classList.add('on');
 
-  const selector = $(this).attr('data-filter');
-  $('.grid').isotope({
-    filter: selector,
+    const selector = this.getAttribute('data-filter');
+    iso.arrange({ filter: selector });
   });
 });
 
