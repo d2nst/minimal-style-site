@@ -1,4 +1,4 @@
-// menu 활성화
+// 현재 페이지 URL을 가져와서 활성 페이지를 식별하고, 해당 페이지에 해당하는 내비게이션 링크에 active 클래스를 추가 또는 제거하는 기능을 수행
 const currentURL = window.location.href;
 const activePage =
   currentURL.substring(currentURL.lastIndexOf('/') + 1) || 'index.html';
@@ -26,7 +26,7 @@ overlay.addEventListener('click', () => {
   overlay.classList.toggle('visible');
 });
 
-// 전체 title 부분 gsap
+// 전체 title 부분 애니메이션 사용
 gsap.to('.box', {
   duration: 1,
   y: -80,
